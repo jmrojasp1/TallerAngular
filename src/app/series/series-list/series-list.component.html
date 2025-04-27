@@ -1,0 +1,43 @@
+<div class="series-container">
+    <!-- Nuevo header en azul claro -->
+    <div class="header">
+      <img src="assets/tv-icon.png" alt="TV Icon" class="tv-icon">
+      <h1>TV Series</h1>
+    </div>
+  
+    <div class="content-wrapper">
+      <!-- Tabla de series -->
+      <div class="series-table-container">
+        <table class="series-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Channel</th>
+              <th>Seasons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let serie of seriesDetail" 
+                (click)="selectSerie(serie)"
+                [class.selected]="selectedSerie?.id === serie.id">
+              <td>{{ serie.id }}</td>
+              <td class="serie-name">{{ serie.name }}</td>
+              <td>{{ serie.channel }}</td>
+              <td>{{ serie.seasons }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- Detalle de la serie -->
+      <div class="series-detail" *ngIf="selectedSerie">
+        <img [src]="selectedSerie.poster" alt="{{ selectedSerie.name }} poster" class="series-poster">
+        <div class="series-info">
+          <h2>{{ selectedSerie.name }}</h2>
+          <p>{{ selectedSerie.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

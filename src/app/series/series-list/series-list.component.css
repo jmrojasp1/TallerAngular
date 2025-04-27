@@ -1,0 +1,98 @@
+/* Estilos generales */
+.series-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  background-color: #26c6da; /* Azul clarito */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.tv-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Estilos para la tabla */
+.series-table-container {
+  flex: 1;
+}
+
+.series-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.series-table th {
+  background-color: #e0f7fa; /* Cabezera de tabla más clara */
+  color: black;
+  padding: 10px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.series-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.series-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.series-table tbody tr.selected {
+  background-color: #b2ebf2;
+}
+
+.serie-name {
+  color: #0277bd; /* Azulito para nombres de series */
+  cursor: pointer;
+}
+
+/* Detalle de la serie */
+.series-detail {
+  flex: 0 0 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.series-poster {
+  width: 100%;
+  height: auto;
+}
+
+.series-info {
+  padding: 15px;
+}
+
+.series-info h2 {
+  margin: 0 0 10px 0;
+  color: #0277bd;
+}
+
+.series-info p {
+  color: #333;
+  line-height: 1.5;
+}
