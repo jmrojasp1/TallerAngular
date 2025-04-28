@@ -1,12 +1,12 @@
 <div class="series-container">
-    <!-- Nuevo header en azul claro -->
+  
     <div class="header">
-      
+      <img src="assets/tv-icon.png" alt="TV Icon" class="tv-icon">
       <h1>TV Series</h1>
     </div>
   
     <div class="content-wrapper">
-      <!-- Tabla de series -->
+     
       <div class="series-table-container">
         <table class="series-table">
           <thead>
@@ -28,9 +28,14 @@
             </tr>
           </tbody>
         </table>
+  
+        
+        <div class="average-seasons">
+          <strong>Seasons average:</strong> {{ getAverageSeasons() }}
+        </div>
       </div>
   
-      <!-- Detalle de la serie -->
+      
       <div class="series-detail" *ngIf="selectedSerie">
         <img [src]="selectedSerie.poster" alt="{{ selectedSerie.name }} poster" class="series-poster">
         <div class="series-info">
